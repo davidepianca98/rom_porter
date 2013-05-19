@@ -128,6 +128,25 @@ goto tweaks
 :tweaks
 cls
 start tweaks.bat
+goto aroma
+
+:aroma
+cls
+echo.
+echo Has this rom Aroma Installer?
+echo.
+set /p arom=(y/n)
+if %arom%==y (goto aromaa)
+if %arom%==n (goto mod)
+
+:aromaa
+cls
+del %cd%\Base-Rom\base\META-INF
+xcopy %cd%\Port-Rom\port\META-INF %cd%\Base-Rom\base\META-INF
+echo.
+echo Than copy the folder from %cd%\Port-Rom\port except system and META-INF
+echo.
+pause
 goto mod
 
 :mod
