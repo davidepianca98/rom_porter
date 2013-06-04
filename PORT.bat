@@ -34,8 +34,9 @@ echo    2.MIUI
 echo    3.Paranoid Android
 echo    4.PAC MAN
 echo    5.Manufacturer rom (Touchwiz, Sense)
-echo    6.Run fix tool
-echo    7.Exit
+echo    6.Lewa OS
+echo    7.Run fix tool
+echo    8.Exit
 echo  =============================================================================
 set /p sdffs=Enter your decision:
 if %sdffs%==1 (start sto.bat)
@@ -43,5 +44,6 @@ if %sdffs%==2 (start miui.bat)
 if %sdffs%==3 (start pa.bat)
 if %sdffs%==4 (start pac.bat)
 if %sdffs%==5 (start man.bat)
-if %sdffs%==5 (start fix.bat)
-if %sdffs%==7 (exit)
+if %sdffs%==6 (start lewa.bat)
+if %sdffs%==7 (start fix.bat)
+if %sdffs%==8 (exit)
