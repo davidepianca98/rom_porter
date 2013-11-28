@@ -2,7 +2,7 @@
 echo.
 echo  ****************************************
 echo  *                                      *
-echo  *         Rom Porter Fix Tool          *
+echo  *       Rom Porter Fixing Tool         *
 echo  *                                      *
 echo  ****************************************
 echo.
@@ -15,10 +15,10 @@ cls
 echo.
 echo   What fix are you searching for?
 echo.
-echo   1.Bootloop fix
-echo   2.Htc network auto select
-echo   3.Htc graphical issues
-echo   4.Exit
+echo   1. Bootloop fix
+echo   2. HTC network auto select
+echo   3. HTC graphical issues
+echo   4. Exit
 echo.
 set /p menu=Enter your decision 
 if %menu%==1 (goto bl)

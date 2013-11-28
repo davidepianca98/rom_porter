@@ -1,19 +1,19 @@
 @echo off
 color 0b
-title Stock or Cyanogenmod based Rom
+title Manufacturer based ROM
 
 :next
 cls
 echo.
-echo  Put your base rom into Base-Rom 
+echo  Put your base ROM into Base-Rom 
 echo.
 pause
 echo.
-echo  Put your port rom into Port-Rom
+echo  Put your port ROM into Port-Rom
 echo.
 pause
 echo.
-echo  Extracting base rom
+echo  Extracting base ROM
 mkdir %cd%\Base-Rom\base
 if exist "%cd%\Base-Rom\*.zip" (call %cd%\tools\7za.exe x "%cd%\Base-Rom\*" -o"%cd%\Base-Rom\base")
 if errorlevel 1 (
@@ -23,7 +23,7 @@ goto fail
 )
 pause
 echo.
-echo  Extracting port rom
+echo  Extracting port ROM
 mkdir %cd%\Port-Rom\port
 if exist "%cd%\Port-Rom\*.zip" (call %cd%\tools\7za.exe x "%cd%\Port-Rom\*" -o"%cd%\Port-Rom\port")
 if errorlevel 1 (
@@ -37,7 +37,7 @@ goto next1
 :next1
 cls
 echo.
-echo Deleting unneseccessary files...
+echo Deleting unnecessary files...
 rd /s /q %cd%\Port-Rom\port\META-INF
 rd /s /q %cd%\Port-Rom\port\system\vendor
 rd /s /q %cd%\Port-Rom\port\system\lib\egl
@@ -118,9 +118,9 @@ goto choose
 cls
 echo.
 echo Choose your device model (if it's not in these press skip)
-echo 1.Skip
-echo 2.HTC
-echo 3.LGE
+echo 1. Skip
+echo 2. HTC
+echo 3. LGE
 echo.
 set /p ghh=
 if %ghh%==1 (goto skip)
@@ -218,7 +218,7 @@ goto aroma
 :aroma
 cls
 echo.
-echo Has this rom Aroma Installer?
+echo Does this ROM have Aroma Installer?
 echo.
 set /p arom=(y/n)
 if %arom%==y (goto aromaa)
@@ -266,7 +266,7 @@ goto sign
 cls
 cd "%~dp0"
 echo.
-echo   Signing Rom...
+echo   Signing ROM...
 java -Xmx2048m -jar "%~dp0tools\signapk.jar" -w "%~dp0tools\testkey.x509.pem" "%~dp0tools\testkey.pk8" "%~dp0\rom_unsigned.zip" "%~dp0\rom_signed.zip"
 echo.
 if errorlevel 1 (
@@ -274,7 +274,7 @@ echo An error occured
 PAUSE
 goto fail
 )
-echo   Rom signed!
+echo   ROM signed!
 echo.
 pause
 goto success
