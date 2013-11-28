@@ -21,22 +21,22 @@ echo.
 echo  =============================================================================
 echo                      Welcome to KINGbabasula Rom Porter
 echo.
-echo    What do you need?
-echo    1.A clean Cyanogenmod or Aosp that is running on your device as Base-Rom
-echo    2.The rom you want to port as Port-Rom
+echo    You'll need 2 zip files: 
+echo    1. A clean Cyanogenmod or AOSP ROM that is running on your device [Base-Rom]
+echo    2. The ROM you want to port [Port-Rom]
 echo.
 pause
 cls
 echo.
-echo    What rom are you porting?
-echo    1.Stock or Cyanogenmod based
-echo    2.MIUI
-echo    3.Paranoid Android
-echo    4.PAC MAN
-echo    5.Manufacturer rom (Touchwiz, Sense)
-echo    6.Lewa OS
-echo    7.Run fix tool
-echo    8.Exit
+echo    What ROM are you porting?
+echo    1. Stock or Cyanogenmod based
+echo    2. MIUI
+echo    3. Paranoid Android
+echo    4. PAC MAN
+echo    5. Manufacturer rom (Touchwiz, Sense)
+echo    6. Lewa OS
+echo    7. Run fix tool
+echo    8. Exit
 echo  =============================================================================
 set /p sdffs=Enter your decision:
 if %sdffs%==1 (start sto.bat)
