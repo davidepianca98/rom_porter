@@ -36,7 +36,8 @@ echo    4. PAC MAN
 echo    5. Manufacturer rom (Touchwiz, Sense)
 echo    6. Lewa OS
 echo    7. Run fix tool
-echo    8. Exit
+echo    8. Sign zip file
+echo    9. Exit
 echo  =============================================================================
 set /p sdffs=Enter your decision:
 if %sdffs%==1 (start sto.bat)
@@ -46,4 +47,5 @@ if %sdffs%==4 (start pac.bat)
 if %sdffs%==5 (start man.bat)
 if %sdffs%==6 (start lewa.bat)
 if %sdffs%==7 (start fix.bat)
-if %sdffs%==8 (exit)
+if %sdffs%==8 (start sign.bat)
+if %sdffs%==9 (exit)
